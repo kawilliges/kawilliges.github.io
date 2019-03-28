@@ -6,9 +6,20 @@
     <description>Recent content in Posts on Keith Williges</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 27 Mar 2019 15:04:03 +0100</lastBuildDate>
     
 	<atom:link href="http://kawilliges.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First post!</title>
+      <link>http://kawilliges.github.io/post/firstpost/</link>
+      <pubDate>Wed, 27 Mar 2019 15:04:03 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/post/firstpost/</guid>
+      <description>First website post Testing creation of a post, editing, and pushing to gitio website Just a quick test post, to check if the site upload process is working (I really have to automate a script for this or something)
+Tools Tried something different here and am using nano, the terminal text editor. I should probably eventually switch to vim or something, but I just wanted to do this fast and cheap.</description>
+    </item>
     
   </channel>
 </rss>

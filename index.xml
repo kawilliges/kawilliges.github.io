@@ -6,13 +6,44 @@
     <description>Recent content in Keith Williges on Keith Williges</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2019 15:04:03 +0100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First post!</title>
+      <link>http://kawilliges.github.io/post/firstpost/</link>
+      <pubDate>Wed, 27 Mar 2019 15:04:03 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/post/firstpost/</guid>
+      <description>
+
+&lt;h1 id=&#34;first-website-post&#34;&gt;First website post&lt;/h1&gt;
+
+&lt;h2 id=&#34;testing-creation-of-a-post-editing-and-pushing-to-gitio-website&#34;&gt;Testing creation of a post, editing, and pushing to gitio website&lt;/h2&gt;
+
+&lt;p&gt;Just a quick test post, to check if the site upload process is working (I really have to automate a script for this or something)&lt;/p&gt;
+
+&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+
+&lt;p&gt;Tried something different here and am using nano, the terminal text editor. I should probably eventually switch to vim or something, but I just wanted to do this fast and cheap. Let&amp;rsquo;s see; another rabbit hole for another day. I think this enough text now to see what the formatting looks like.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The quick brown fox jumps over the lazy dog&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Costs of reducing water use of concentrating solar power to sustainable levels: Scenarios for North Africa</title>
+      <link>http://kawilliges.github.io/publication/damerau2011/</link>
+      <pubDate>Fri, 01 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/damerau2011/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Making concentrated solar power competitive with coal: The costs of a European feed-in tariff</title>
       <link>http://kawilliges.github.io/publication/williges2010/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>http://kawilliges.github.io/publication/williges2010/</guid>
       <description></description>
