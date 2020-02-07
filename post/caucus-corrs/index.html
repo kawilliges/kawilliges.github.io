@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.1.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Keith Williges">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A quick look at correlations in changing delegate shares between candidates in the second round of caucusing">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://kawilliges.github.io/post/caucus-corrs/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="http://kawilliges.github.io/index.xml" type="application/rss+xml" title="Keith Williges">
+  <link rel="feed" href="http://kawilliges.github.io/index.xml" type="application/rss+xml" title="Keith Williges">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://kawilliges.github.io/post/caucus-corrs/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@keithwilliges">
+  <meta property="twitter:creator" content="@keithwilliges">
+  
+  <meta property="og:site_name" content="Keith Williges">
+  <meta property="og:url" content="http://kawilliges.github.io/post/caucus-corrs/">
+  <meta property="og:title" content="Iowa caucuses - who really lost to who? | Keith Williges">
+  <meta property="og:description" content="A quick look at correlations in changing delegate shares between candidates in the second round of caucusing"><meta property="og:image" content="http://kawilliges.github.io/post/caucus-corrs/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-02-07T12:13:31&#43;01:00">
+  
+  <meta property="article:modified_time" content="2020-02-07T12:13:31&#43;01:00">
+  
+
+  
+
+  
+
+  <title>Iowa caucuses - who really lost to who? | Keith Williges</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Keith Williges</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#experience">
+            
+            <span>Experience</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/post/caucus-corrs/featured_hua694150161d19bc8607a3d6077ece100_106761_800x0_resize_lanczos_2.png');"></div>
+  <span class="article-header-caption">Correlation in change of delegates for a candidate from the first to second round of caucuses, at a 95% confidence level</span>
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Iowa caucuses - who really lost to who?</h1>
+
+        
+        <p class="page-subtitle">A quick look at correlations in changing &lsquo;vote&rsquo; shares between candidates</p>
+        
+
+        
+
+
+
+<meta content="2020-02-07 12:13:31 &#43;0100 CET" itemprop="datePublished">
+<meta content="2020-02-07 12:13:31 &#43;0100 CET" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/keith-williges/">Keith Williges</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Feb 7, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f&amp;url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f&amp;title=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f&amp;title=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f&amp;body=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/post/caucus-corrs/featured_hua694150161d19bc8607a3d6077ece100_106761_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <span class="article-header-caption">Correlation in change of delegates for a candidate from the first to second round of caucuses, at a 95% confidence level</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Iowa caucuses - who really lost to who?</h1>
+
+  
+  <p class="page-subtitle">A quick look at correlations in changing &lsquo;vote&rsquo; shares between candidates</p>
+  
+
+  
+
+
+
+<meta content="2020-02-07 12:13:31 &#43;0100 CET" itemprop="datePublished">
+<meta content="2020-02-07 12:13:31 &#43;0100 CET" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/keith-williges/">Keith Williges</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Feb 7, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f&amp;url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f&amp;title=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f&amp;title=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Iowa%20caucuses%20-%20who%20really%20lost%20to%20who%3f&amp;body=http%3a%2f%2fkawilliges.github.io%2fpost%2fcaucus-corrs%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h4 id="i-happened-to-be-watching-a-press-conference-from-the-iowa-democratic-party-when-they-released-their-first-caucus-results-and-was-interested-in-seeing-what-if-anything-could-be-gleaned-from-the-decision-to-list-more-extensive-data-while-most-of-the-main-results-have-been-discussed-in-more-depth-elsewhere-i-was-curious-if-i-could-get-an-indication-of-how-delegates-shifted-from-the-first-to-second-rounds-what-follows-is-a-first-quick-attempt-to-see-if-any-patterns-can-be-found-in-the-data-with-hopefully-a-more-extensive-analysis-to-follow-when-full-results-are-released-and-i-have-some-time-to-do-some-modelling">I happened to be watching a press conference from the Iowa Democratic Party when they released their first caucus results and was interested in seeing what - if anything - could be gleaned from the decision to list more extensive data. While most of the main results have been discussed in more depth elsewhere, I was curious if I could get an indication of how delegates shifted from the first to second rounds. What follows is a first quick attempt to see if any patterns can be found in the data, with hopefully a more extensive analysis to follow when full results are released and I have some time to do some modelling.</h4>
+
+
+
+
+<figure>
+
+<img src="featured.png" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  <h4>Correlation in change of delegates for a candidate from the first to second round of caucuses, at a 95% confidence level. Pies indicate the size of the correlation. All zero values of vote change removed from data.</h4>
+  
+</figcaption>
+
+</figure>
+
+<h4 id="highlights">Highlights</h4>
+
+<p>A quick look at the correlations between the change in delegates selecting a given candidate from the first to second round shows some significant correlations, as seen in the correlation matrix above. It shows some interesting negative relationships, mainly between Warren, Biden and Yang, with weaker negative relationships between Yang and Sanders, Buttigieg and Klobuchar, Biden and Klobuchar, and Biden and Sanders. This gives a first indication that at a precinct level, votes from the delegates from the first round may have been more likely to (in the second round) go to one of these candidates from the other.</p>
+
+<h4 id="why-is-this-interesting">Why is this interesting?</h4>
+
+<p>As the race heats up, and candidates drop out, results like this might help to indicate where the dropout&rsquo;s supporters are most likely to shift. Sophisticated models usually estimate this based on demographics, ideological proximity of candidates etc., but this might provide an alternative way to get an idea as to who may gain from a candidate dropping out. This does not take into account candidates endorsing others who remain, but is an indication of where voters (without any outside influence) might find themselves gravitating.</p>
+
+<h4 id="data-and-methods">Data and methods</h4>
+
+<p>After finding and importing the caucus data as provided by the Iowa Democratic Party from <a href="results.thecaucuses.org" target="_blank">their website</a> - I give an overview of <a href="http://kawilliges.github.io/post/web-scrape-caucus/" target="_blank">how that might be done</a> - and getting the data into a long format, using a variable to indicate the candidate and rows for precinct data (thus each precinct has 14 rows, one for each candidate + undecided and other), I generated a simple variable to indicate the amount of votes gained or lost in the second round, and eliminated entries with zero values</p>
+
+<pre><code class="language-R">caucus &lt;- mutate(caucus, vGain = vote2 - vote1)
+dfGainsNoZero[dfGainsNoZero == 0] &lt;- NA
+</code></pre>
+
+<p>Then it&rsquo;s a simple matter to calculate correlations and significance values between the candidates (after converting the dataset to a wide format, where each row is a precinct, and each column is a candidate&rsquo;s vote shift)</p>
+
+<pre><code class="language-R"># find pearson correlations and p values (selecting only variables which are
+# numeric in the data frame)
+rcorMatrix &lt;- rcorr(as.matrix(dfGainsNoZero[sapply(dfGainsNoZero, is.numeric)]),
+                    type = &quot;pearson&quot;)
+
+# Graph correlations w/ only significant values (95%) shown as pies
+rcorPlot &lt;- corrplot(rcorMatrix$r, type=&quot;upper&quot;, order=&quot;hclust&quot;, addrect = 3,
+         p.mat = rcorMatrix$P, sig.level = 0.05, insig = &quot;blank&quot;,
+         method = &quot;pie&quot;, tl.col = &quot;black&quot;)
+</code></pre>
+
+<p>The <code>corrplot</code> package provides a nice easy way to visualize the resulting correlation matrix, and the result is seen in the figure at the top of the page.</p>
+
+<h4 id="caveats">Caveats</h4>
+
+<p>This is a <strong>very</strong> simple, very vague indication of where delegates might have moved from and to between rounds of voting. This only reflects the net change in delegate count, and does not reflect that candidates may have gained some delegates and lost others, or traded amongst the other candidates. This data also reflects only an initial sample of 62% of all precincts; now that unofficial data is available for all precincts, I will re-run and continue the analysis.</p>
+
+<p>I would like to build on this with a more sophisticated approach, but that will take more time and this is something of a side project for me. I am by no means an expert in political science or analysis of voting or elections.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/election-2020/">election 2020</a>
+  
+  <a class="badge badge-light" href="/tags/iowa-caucuses/">Iowa caucuses</a>
+  
+  <a class="badge badge-light" href="/tags/analysis/">analysis</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/web-scrape-caucus/">2020 Iowa Democratic Caucuses results</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d7381f2d79e6271d4da28f474f49096c.js"></script>
+
+  </body>
+</html>
+

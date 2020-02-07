@@ -6,29 +6,196 @@
     <description>Recent content in Keith Williges on Keith Williges</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Mar 2019 15:04:03 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 12:13:31 +0100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>First post!</title>
-      <link>http://kawilliges.github.io/post/firstpost/</link>
-      <pubDate>Wed, 27 Mar 2019 15:04:03 +0100</pubDate>
+      <title>Iowa caucuses - who really lost to who?</title>
+      <link>http://kawilliges.github.io/post/caucus-corrs/</link>
+      <pubDate>Fri, 07 Feb 2020 12:13:31 +0100</pubDate>
       
-      <guid>http://kawilliges.github.io/post/firstpost/</guid>
+      <guid>http://kawilliges.github.io/post/caucus-corrs/</guid>
       <description>
 
-&lt;h1 id=&#34;first-website-post&#34;&gt;First website post&lt;/h1&gt;
+&lt;h4 id=&#34;i-happened-to-be-watching-a-press-conference-from-the-iowa-democratic-party-when-they-released-their-first-caucus-results-and-was-interested-in-seeing-what-if-anything-could-be-gleaned-from-the-decision-to-list-more-extensive-data-while-most-of-the-main-results-have-been-discussed-in-more-depth-elsewhere-i-was-curious-if-i-could-get-an-indication-of-how-delegates-shifted-from-the-first-to-second-rounds-what-follows-is-a-first-quick-attempt-to-see-if-any-patterns-can-be-found-in-the-data-with-hopefully-a-more-extensive-analysis-to-follow-when-full-results-are-released-and-i-have-some-time-to-do-some-modelling&#34;&gt;I happened to be watching a press conference from the Iowa Democratic Party when they released their first caucus results and was interested in seeing what - if anything - could be gleaned from the decision to list more extensive data. While most of the main results have been discussed in more depth elsewhere, I was curious if I could get an indication of how delegates shifted from the first to second rounds. What follows is a first quick attempt to see if any patterns can be found in the data, with hopefully a more extensive analysis to follow when full results are released and I have some time to do some modelling.&lt;/h4&gt;
 
-&lt;h2 id=&#34;testing-creation-of-a-post-editing-and-pushing-to-gitio-website&#34;&gt;Testing creation of a post, editing, and pushing to gitio website&lt;/h2&gt;
 
-&lt;p&gt;Just a quick test post, to check if the site upload process is working (I really have to automate a script for this or something)&lt;/p&gt;
 
-&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
 
-&lt;p&gt;Tried something different here and am using nano, the terminal text editor. I should probably eventually switch to vim or something, but I just wanted to do this fast and cheap. Let&amp;rsquo;s see; another rabbit hole for another day. I think this enough text now to see what the formatting looks like.&lt;/p&gt;
+&lt;figure&gt;
 
-&lt;p&gt;&lt;em&gt;The quick brown fox jumps over the lazy dog&lt;/em&gt;&lt;/p&gt;
+&lt;img src=&#34;featured.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Correlation in change of delegates for a candidate from the first to second round of caucuses, at a 95% confidence level. Pies indicate the size of the correlation. All zero values of vote change removed from data.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;highlights&#34;&gt;Highlights&lt;/h4&gt;
+
+&lt;p&gt;A quick look at the correlations between the change in delegates selecting a given candidate from the first to second round shows some significant correlations, as seen in the correlation matrix above. It shows some interesting negative relationships, mainly between Warren, Biden and Yang, with weaker negative relationships between Yang and Sanders, Buttigieg and Klobuchar, Biden and Klobuchar, and Biden and Sanders. This gives a first indication that at a precinct level, votes from the delegates from the first round may have been more likely to (in the second round) go to one of these candidates from the other.&lt;/p&gt;
+
+&lt;h4 id=&#34;why-is-this-interesting&#34;&gt;Why is this interesting?&lt;/h4&gt;
+
+&lt;p&gt;As the race heats up, and candidates drop out, results like this might help to indicate where the dropout&amp;rsquo;s supporters are most likely to shift. Sophisticated models usually estimate this based on demographics, ideological proximity of candidates etc., but this might provide an alternative way to get an idea as to who may gain from a candidate dropping out. This does not take into account candidates endorsing others who remain, but is an indication of where voters (without any outside influence) might find themselves gravitating.&lt;/p&gt;
+
+&lt;h4 id=&#34;data-and-methods&#34;&gt;Data and methods&lt;/h4&gt;
+
+&lt;p&gt;After finding and importing the caucus data as provided by the Iowa Democratic Party from &lt;a href=&#34;results.thecaucuses.org&#34; target=&#34;_blank&#34;&gt;their website&lt;/a&gt; - I give an overview of &lt;a href=&#34;http://kawilliges.github.io/post/web-scrape-caucus/&#34; target=&#34;_blank&#34;&gt;how that might be done&lt;/a&gt; - and getting the data into a long format, using a variable to indicate the candidate and rows for precinct data (thus each precinct has 14 rows, one for each candidate + undecided and other), I generated a simple variable to indicate the amount of votes gained or lost in the second round, and eliminated entries with zero values&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;caucus &amp;lt;- mutate(caucus, vGain = vote2 - vote1)
+dfGainsNoZero[dfGainsNoZero == 0] &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then it&amp;rsquo;s a simple matter to calculate correlations and significance values between the candidates (after converting the dataset to a wide format, where each row is a precinct, and each column is a candidate&amp;rsquo;s vote shift)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# find pearson correlations and p values (selecting only variables which are
+# numeric in the data frame)
+rcorMatrix &amp;lt;- rcorr(as.matrix(dfGainsNoZero[sapply(dfGainsNoZero, is.numeric)]),
+                    type = &amp;quot;pearson&amp;quot;)
+
+# Graph correlations w/ only significant values (95%) shown as pies
+rcorPlot &amp;lt;- corrplot(rcorMatrix$r, type=&amp;quot;upper&amp;quot;, order=&amp;quot;hclust&amp;quot;, addrect = 3,
+         p.mat = rcorMatrix$P, sig.level = 0.05, insig = &amp;quot;blank&amp;quot;,
+         method = &amp;quot;pie&amp;quot;, tl.col = &amp;quot;black&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;corrplot&lt;/code&gt; package provides a nice easy way to visualize the resulting correlation matrix, and the result is seen in the figure at the top of the page.&lt;/p&gt;
+
+&lt;h4 id=&#34;caveats&#34;&gt;Caveats&lt;/h4&gt;
+
+&lt;p&gt;This is a &lt;strong&gt;very&lt;/strong&gt; simple, very vague indication of where delegates might have moved from and to between rounds of voting. This only reflects the net change in delegate count, and does not reflect that candidates may have gained some delegates and lost others, or traded amongst the other candidates. This data also reflects only an initial sample of 62% of all precincts; now that unofficial data is available for all precincts, I will re-run and continue the analysis.&lt;/p&gt;
+
+&lt;p&gt;I would like to build on this with a more sophisticated approach, but that will take more time and this is something of a side project for me. I am by no means an expert in political science or analysis of voting or elections.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>2020 Iowa Democratic Caucuses results</title>
+      <link>http://kawilliges.github.io/post/web-scrape-caucus/</link>
+      <pubDate>Fri, 07 Feb 2020 11:16:35 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/post/web-scrape-caucus/</guid>
+      <description>
+
+&lt;h2 id=&#34;obtaining-iowa-democratic-party-caucus-results&#34;&gt;Obtaining Iowa Democratic Party caucus results&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-iowa-democratic-party-idp-has-made-caucus-data-freely-available-on-their-website-but-there-s-no-easy-way-to-download-the-results-to-analyze-and-the-website-doesn-t-lend-itself-to-easy-scraping-here-i-go-through-a-quick-and-dirty-approach-to-getting-the-results-you-can-see-on-the-site-into-a-format-more-easily-usable-by-e-g-r-or-python&#34;&gt;The Iowa Democratic Party (IDP) has made caucus data freely available on their website, but there&amp;rsquo;s no easy way to download the results to analyze, and the website doesn&amp;rsquo;t lend itself to easy scraping. Here I go through a quick-and-dirty approach to getting the results you can see on the site into a format more easily usable by e.g. R or python&lt;/h3&gt;
+
+&lt;p&gt;As you probably know by now, the IDP has been releasing caucus results over the past few days, and seem to be mostly finished. All hubbub aside, the results are released to their &lt;a href=&#34;http://results.thecaucuses.org&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;, which seems to be dynamically generated and full of subtotal columns etc., with no easy way to scrape via a normal approach (or it may be my scraping ability is below average). Either way, I have found a &lt;em&gt;hypothetical&lt;/em&gt; alternative route. I am not a lawyer, and could not find a clear yes/no answer as to if the data was freely available for anyone to use, so proceed at your own risk (See disclaimer at the bottom of this post)&lt;/p&gt;
+
+&lt;p&gt;The data has to be contained somewhere, and in this case it&amp;rsquo;s relatively easy to find, when you check the page source (on chrome, right click on the site and choose View Source.) You&amp;rsquo;ll see a wall of text, with a bunch of &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; tags etc., but you can see the resemblance between the raw source and resulting page. If you scroll down you can see where the data table is generated; going all the way to the bottom of that, you come to the end of the table, and find the following chunk:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script defer=&amp;quot;&amp;quot; data-next-page=&amp;quot;/&amp;quot; src=&amp;quot;/_next/static/ZKjDWaVnmeHdtzPm_-zCR/pages/index.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This looks promising. If you follow that link, you get another wall of indecipherable text, but skimming through eventually you find what seems to be each precinct&amp;rsquo;s data entry, looking something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;[&amp;quot;Lee&amp;quot;,2,947310,&amp;quot;FM5&amp;quot;,&amp;quot;Fort Madison 5&amp;quot;,&amp;quot;2020-02-04T21:00:25.739524&amp;quot;,1.68,0,0,0,0,0,0,24,25,0.42,0,0,0,30,35,0.7,0,0,0,0,0,0,0,0,0,0,0,0,21,31,0.56,2,0,0,0,0,0,4,0,0,10,0,0],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Happily, this looks like something you can use, by rather easily converting into a .csv file:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Copy the contents of the index.js page you found, and paste into the text editor of your choice&lt;/li&gt;
+&lt;li&gt;Get rid of all the non-useful text before the individual data entries in the format of the above line. There is also a bit of code after the precinct data, which starts with: &lt;code&gt;[null]]&#39;)},ttDY:function(e,t,n){e.exports=n(&amp;quot;+iuc&amp;quot;)}&lt;/code&gt;; you don&amp;rsquo;t need anything that comes after this, so you can get rid of all that as well.&lt;/li&gt;
+&lt;li&gt;Now you have the data, but you&amp;rsquo;ll need to format it to import it into the stats language of our choice, but that&amp;rsquo;s also easy. Just find and replace &lt;code&gt;],&lt;/code&gt; with a newline (&lt;code&gt;/n&lt;/code&gt;), and then remove any remaining &lt;code&gt;[&lt;/code&gt; or &lt;code&gt;]&lt;/code&gt; characters.&lt;/li&gt;
+&lt;li&gt;You have one final problem; no headers. Thankfully, if you dig around in the source file a bit more, you find the following line, hidden away:
+&lt;code&gt;js
+Gt=[&amp;quot;county&amp;quot;,&amp;quot;cd&amp;quot;,&amp;quot;precinct_id&amp;quot;,&amp;quot;short_precinct_name&amp;quot;,&amp;quot;long_precinct_name&amp;quot;,&amp;quot;timestamp&amp;quot;,&amp;quot;total_precinct_sde&amp;quot;,&amp;quot;delaney_first_expression&amp;quot;,&amp;quot;delaney_final_expression&amp;quot;,&amp;quot;delaney_sde&amp;quot;,&amp;quot;bennet_first_expression&amp;quot;,&amp;quot;bennet_final_expression&amp;quot;,&amp;quot;bennet_sde&amp;quot;,&amp;quot;biden_first_expression&amp;quot;,&amp;quot;biden_final_expression&amp;quot;,&amp;quot;biden_sde&amp;quot;,&amp;quot;bloomberg_first_expression&amp;quot;,&amp;quot;bloomberg_final_expression&amp;quot;,&amp;quot;bloomberg_sde&amp;quot;,&amp;quot;buttigieg_first_expression&amp;quot;,&amp;quot;buttigieg_final_expression&amp;quot;,&amp;quot;buttigieg_sde&amp;quot;,&amp;quot;gabbard_first_expression&amp;quot;,&amp;quot;gabbard_final_expression&amp;quot;,&amp;quot;gabbard_sde&amp;quot;,&amp;quot;klobuchar_first_expression&amp;quot;,&amp;quot;klobuchar_final_expression&amp;quot;,&amp;quot;klobuchar_sde&amp;quot;,&amp;quot;other_first_expression&amp;quot;,&amp;quot;other_final_expression&amp;quot;,&amp;quot;other_sde&amp;quot;,&amp;quot;patrick_first_expression&amp;quot;,&amp;quot;patrick_final_expression&amp;quot;,&amp;quot;patrick_sde&amp;quot;,&amp;quot;sanders_first_expression&amp;quot;,&amp;quot;sanders_final_expression&amp;quot;,&amp;quot;sanders_sde&amp;quot;,&amp;quot;steyer_first_expression&amp;quot;,&amp;quot;steyer_final_expression&amp;quot;,&amp;quot;steyer_sde&amp;quot;,&amp;quot;uncommitted_first_expression&amp;quot;,&amp;quot;uncommitted_final_expression&amp;quot;,&amp;quot;uncommitted_sde&amp;quot;,&amp;quot;warren_first_expression&amp;quot;,&amp;quot;warren_final_expression&amp;quot;,&amp;quot;warren_sde&amp;quot;,&amp;quot;yang_first_expression&amp;quot;,&amp;quot;yang_final_expression&amp;quot;,&amp;quot;yang_sde&amp;quot;]
+&lt;/code&gt;
+This looks promising. Add it to the top row of your new .csv file (after removing the unnecessary quotes and &lt;code&gt;Gt=[&lt;/code&gt; etc.), and there you go!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now, import into your statistics editor of choice, and see what you get. Everything nicely organized and ready for some analysis, as you see fit.&lt;/p&gt;
+
+&lt;h4 id=&#34;disclaimer-i-am-unsure-of-the-legality-of-doing-this-it-seems-reasonable-that-this-is-ok-to-do-especially-considering-the-idp-s-emphasis-on-transparency-but-i-could-not-find-a-terms-of-service-for-the-website-nor-could-i-find-answers-e-g-who-can-access-the-data-etc-on-the-idp-faq-or-elsewhere-their-party-constitution-is-not-available-online-at-the-moment-to-check-there-it-should-be-ok-given-that-you-d-just-be-converting-a-table-on-the-website-into-a-machine-readable-format-without-the-use-of-web-scraping-tools-no-overloading-the-servers-with-repeated-queries-just-viewing-the-site-s-source-code-that-being-said-proceed-at-your-own-risk-i-m-not-a-lawyer&#34;&gt;Disclaimer: I am unsure of the legality of doing this. It seems reasonable that this is OK to do, especially considering the IDP&amp;rsquo;s emphasis on transparency, but I could not find a Terms of Service for the website, nor could I find answers e.g.  &amp;ldquo;who can access the data&amp;rdquo; etc. on the IDP FAQ or elsewhere (their party constitution is not available online at the moment to check there). It should be ok, given that you&amp;rsquo;d just be converting a table on the website into a machine-readable format, without the use of web-scraping tools (no overloading the servers with repeated queries, just viewing the site&amp;rsquo;s source code). That being said, proceed at your own risk; I&amp;rsquo;m not a lawyer.&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The practice of climate change policy evaluations in the EU and its member states: results from a meta-analysis</title>
+      <link>http://kawilliges.github.io/publication/fujiwara2019/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/fujiwara2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EAERE 2019 parallel session talk</title>
+      <link>http://kawilliges.github.io/talk/eaere2019/</link>
+      <pubDate>Wed, 05 Jun 2019 14:07:20 +0200</pubDate>
+      
+      <guid>http://kawilliges.github.io/talk/eaere2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The economy-wide effects of large-scale renewable electricity expansion in Europe: the role of integration costs</title>
+      <link>http://kawilliges.github.io/publication/bachner2019/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0200</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/bachner2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risk-sensitizing future investment needed to achieve the sustainable development goals</title>
+      <link>http://kawilliges.github.io/publication/hochrainer2017/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0200</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/hochrainer2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards an assessment of adaptive capacity of the European agricultural sector to droughts</title>
+      <link>http://kawilliges.github.io/publication/williges2017/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0200</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/williges2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operationalizing iterative risk management under limited information: Fiscal and economic risks due to natural disasters in Cambodia</title>
+      <link>http://kawilliges.github.io/publication/mochizuki2015/</link>
+      <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/mochizuki2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revisiting the &#39;disaster and development&#39; debate - Toward a broader understanding of macroeconomic risk and resilience</title>
+      <link>http://kawilliges.github.io/publication/mochizuki2014/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0200</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/mochizuki2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Managing unnatural disaster risk from climate extremes</title>
+      <link>http://kawilliges.github.io/publication/mechler2014/</link>
+      <pubDate>Wed, 26 Mar 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/mechler2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Funding public adaptation to climate-related disasters. Estimates for a global fund</title>
+      <link>http://kawilliges.github.io/publication/hochrain2014/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/hochrain2014/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -37,6 +204,15 @@
       <pubDate>Fri, 01 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>http://kawilliges.github.io/publication/damerau2011/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solar power investment in North Africa: Reducing perceived risks</title>
+      <link>http://kawilliges.github.io/publication/komendan2011/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/publication/komendan2011/</guid>
       <description></description>
     </item>
     

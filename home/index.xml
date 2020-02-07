@@ -52,6 +52,15 @@ For inspiration, check out the Markdown files which power the personal demo. The
     </item>
     
     <item>
+      <title>Recent Posts</title>
+      <link>http://kawilliges.github.io/home/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://kawilliges.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recent Publications</title>
       <link>http://kawilliges.github.io/home/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -59,15 +68,6 @@ For inspiration, check out the Markdown files which power the personal demo. The
       <guid>http://kawilliges.github.io/home/publications/</guid>
       <description> Quickly discover relevant content by filtering publications.
   </description>
-    </item>
-    
-    <item>
-      <title>Recent Posts</title>
-      <link>http://kawilliges.github.io/home/posts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://kawilliges.github.io/home/posts/</guid>
-      <description></description>
     </item>
     
     <item>

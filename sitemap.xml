@@ -4,8 +4,88 @@
     
     <url>
     
-      <loc>http://kawilliges.github.io/post/firstpost/</loc>
-      <lastmod>2019-03-27T15:04:03+01:00</lastmod>
+      <loc>http://kawilliges.github.io/post/caucus-corrs/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/post/web-scrape-caucus/</loc>
+      <lastmod>2020-02-07T11:16:35+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/fujiwara2019/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/talk/eaere2019/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/bachner2019/</loc>
+      <lastmod>2019-04-01T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/hochrainer2017/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/williges2017/</loc>
+      <lastmod>2017-08-01T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/mochizuki2015/</loc>
+      <lastmod>2015-12-14T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/mochizuki2014/</loc>
+      <lastmod>2014-07-01T00:00:00+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/mechler2014/</loc>
+      <lastmod>2014-03-26T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/hochrain2014/</loc>
+      <lastmod>2014-03-01T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -14,6 +94,14 @@
     
       <loc>http://kawilliges.github.io/publication/damerau2011/</loc>
       <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication/komendan2011/</loc>
+      <lastmod>2011-01-01T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -29,6 +117,51 @@
     <url>
     
       <loc>http://kawilliges.github.io/author/admin/</loc>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/publication_types/2/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/adriana-keating/</loc>
+      <lastmod>2014-07-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/alexandros-flamos/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/andreas-tuerk/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/andrew-maskrey/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -53,7 +186,25 @@
     <url>
     
       <loc>http://kawilliges.github.io/authors/</loc>
-      <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+      <lastmod>2014-07-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/bandula-wickramarachchi/</loc>
+      <lastmod>2015-12-14T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/bina-desai/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -62,6 +213,69 @@
     <url>
     
       <loc>http://kawilliges.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/emilie-alberola/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/gabriel-bachner/</loc>
+      <lastmod>2019-04-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/georg-pflug/</loc>
+      <lastmod>2014-03-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/harro-van-asselt/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/iowa-caucuses/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/jeroen-c.j.h.-aerts/</loc>
+      <lastmod>2014-03-26T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/joanne-linnerooth-bayer/</loc>
+      <lastmod>2014-03-26T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -78,8 +292,35 @@
     
     <url>
     
+      <loc>http://kawilliges.github.io/authors/junko-mochizuki/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/juraj-balkovic/</loc>
+      <lastmod>2017-08-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/karl-w.-steininger/</loc>
+      <lastmod>2019-04-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://kawilliges.github.io/</loc>
-      <lastmod>2019-03-27T15:04:03+01:00</lastmod>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -88,7 +329,7 @@
     <url>
     
       <loc>http://kawilliges.github.io/authors/keith-williges/</loc>
-      <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -98,6 +339,60 @@
     
       <loc>http://kawilliges.github.io/authors/kerstin-damerau/</loc>
       <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/laurens-m.-bouwer/</loc>
+      <lastmod>2014-03-26T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/michael-ten-donkelaar/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/nadya-komendantova/</loc>
+      <lastmod>2011-01-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/niki-artemis-spyridaki/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/noriko-fujiwara/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/paul-bowyer/</loc>
+      <lastmod>2017-08-01T00:00:00+02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -115,7 +410,7 @@
     <url>
     
       <loc>http://kawilliges.github.io/post/</loc>
-      <lastmod>2019-03-27T15:04:03+01:00</lastmod>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
     </url>
     
   
@@ -123,6 +418,7 @@
     <url>
     
       <loc>http://kawilliges.github.io/publication_types/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -131,21 +427,15 @@
     <url>
     
       <loc>http://kawilliges.github.io/publication/</loc>
-      <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>http://kawilliges.github.io/talk/</loc>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://kawilliges.github.io/tags/</loc>
+      <loc>http://kawilliges.github.io/tags/r/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -153,7 +443,184 @@
     
     <url>
     
+      <loc>http://kawilliges.github.io/talk/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/reinhard-mechler/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/ros-sovann/</loc>
+      <lastmod>2015-12-14T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/sebastian-voigt/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/soravit-vitoontus/</loc>
+      <lastmod>2015-12-14T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/stefan-b%C3%B6%C3%9Fner/</loc>
+      <lastmod>2019-12-12T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/stefan-hochrainer-stigler/</loc>
+      <lastmod>2017-09-01T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/authors/swenja-surminski/</loc>
+      <lastmod>2014-03-26T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tutorial/</loc>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://kawilliges.github.io/authors/admin/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/analysis/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/climate-mitigation/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/data-cleaning/</loc>
+      <lastmod>2020-02-07T11:16:35+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/data-scraping/</loc>
+      <lastmod>2020-02-07T11:16:35+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/econometrics/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/categories/economics/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/election-2020/</loc>
+      <lastmod>2020-02-07T12:13:31+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/event-study/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/stranded-assets/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://kawilliges.github.io/tags/talks/</loc>
+      <lastmod>2019-06-05T14:07:20+02:00</lastmod>
       <priority>0</priority>
     </url>
     

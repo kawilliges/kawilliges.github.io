@@ -6,19 +6,27 @@
     <description>Recent content in Posts on Keith Williges</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Mar 2019 15:04:03 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 12:13:31 +0100</lastBuildDate>
     
 	<atom:link href="http://kawilliges.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>First post!</title>
-      <link>http://kawilliges.github.io/post/firstpost/</link>
-      <pubDate>Wed, 27 Mar 2019 15:04:03 +0100</pubDate>
+      <title>Iowa caucuses - who really lost to who?</title>
+      <link>http://kawilliges.github.io/post/caucus-corrs/</link>
+      <pubDate>Fri, 07 Feb 2020 12:13:31 +0100</pubDate>
       
-      <guid>http://kawilliges.github.io/post/firstpost/</guid>
-      <description>First website post Testing creation of a post, editing, and pushing to gitio website Just a quick test post, to check if the site upload process is working (I really have to automate a script for this or something)
-Tools Tried something different here and am using nano, the terminal text editor. I should probably eventually switch to vim or something, but I just wanted to do this fast and cheap.</description>
+      <guid>http://kawilliges.github.io/post/caucus-corrs/</guid>
+      <description>I happened to be watching a press conference from the Iowa Democratic Party when they released their first caucus results and was interested in seeing what - if anything - could be gleaned from the decision to list more extensive data. While most of the main results have been discussed in more depth elsewhere, I was curious if I could get an indication of how delegates shifted from the first to second rounds.</description>
+    </item>
+    
+    <item>
+      <title>2020 Iowa Democratic Caucuses results</title>
+      <link>http://kawilliges.github.io/post/web-scrape-caucus/</link>
+      <pubDate>Fri, 07 Feb 2020 11:16:35 +0100</pubDate>
+      
+      <guid>http://kawilliges.github.io/post/web-scrape-caucus/</guid>
+      <description>Obtaining Iowa Democratic Party caucus results The Iowa Democratic Party (IDP) has made caucus data freely available on their website, but there&amp;rsquo;s no easy way to download the results to analyze, and the website doesn&amp;rsquo;t lend itself to easy scraping. Here I go through a quick-and-dirty approach to getting the results you can see on the site into a format more easily usable by e.g. R or python As you probably know by now, the IDP has been releasing caucus results over the past few days, and seem to be mostly finished.</description>
     </item>
     
   </channel>
